@@ -1,2 +1,8 @@
-# 2000 ve 3200 sayilari arasinda (2000 ve 3200 dahil) 7'ye tam bolunebilen fakat 5'in kati olmayan tum sayilari 
-# aralarinda virgul olacak sekilde tek satirda terminale bastirin.
+sayi1 = 2000
+sayi2= 3200
+list =[]
+
+for sayi in range(sayi1, sayi2+1):
+    if (sayi % 7 == 0 and sayi % 5 != 0):
+        list.append(sayi)
+print(list)
