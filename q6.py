@@ -20,9 +20,25 @@
 # tum kod neticesinde terminalde gorunmesi gereken degerler:
 # hesapta yeterli bakiye yoktur
 # bakiye: 130
+
 import hesap
-for i in hesap.islemler:    
+
+bakiye=0
+for i in hesap.islemler:  
+    if i['islem_tipi'] == 'para_yatirma':
+        bakiye += i["miktar"]
+        with open("islemler.txt", "a") as f:
+            f.write('+' + str(i['miktar']) + '\n')
+    if i['islem_tipi'] == 'para_cekme':
+        try:
+            if bakiye > i['miktar']:
+                bakiye -= i["miktar"]
+                with open("islemler.txt", "a") as f:
+                    f.write('-' + str(i['miktar']) + '\n')   
+            else:
+                raise Exception ("hesapta yeterli miktar yoktur..")        
+        except:
+            print ("hesapta yeterli miktar yoktur")             
+print('bakiye: ',bakiye)
+         
     
-    print(i.values())
-   
- 
