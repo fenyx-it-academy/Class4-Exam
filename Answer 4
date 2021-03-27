@@ -1,0 +1,24 @@
+# Input ile alinan bir stringi, harfleri tekrar etmeyecek sekilde ve alfabetik olarak siralayan bir 
+# fonksiyon olusturun. Boslugu da dikkate alin.
+# Ornek input: 'monty pythons flying circus'
+# Ornek output: ' cfghilmnoprstuy'
+
+# Ayni inputu tersten siralayip bir liste haline ceviren bir fonksiyon olusturun.
+# Ornek input: 'monty pythons flying circus'
+# Ornek output: ['circus', 'flying', 'pythons', 'monty'] 
+
+def alphabetic():
+    a=input("Type something: ")
+    b=set(a)
+    v=list(b)
+    v.sort()
+    print("joint, unique string is ==> ","".join(v))
+    invert (a)
+
+def invert (a):
+    k=[]
+    for i in a.split():
+        k.append(i)
+    print("invert of strings ==>        ", k[::-1])
+    
+alphabetic()
