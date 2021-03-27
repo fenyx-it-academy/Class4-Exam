@@ -15,5 +15,5 @@ def listreverse(str):
 
 if __name__ == "__main__":
     str = 'monty pythons flying circus'
-    print("Without Order = ", removeDupWithoutOrder(str))
+    print("With Order = ", removeDupWithoutOrder(str))
     print("Reverse List  = ", listreverse(str))
