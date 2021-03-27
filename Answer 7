@@ -1,0 +1,27 @@
+# "Yazici Ciftligi" adını verdiğiniz milyon dolarlık bir is fikrine sahipsiniz.
+# Pek çok insanın ofislerinde ve evlerinde yazıcı kullandığını biliyorsunuz ve bunun hiç mantıklı olmadigini dusunuyorsunuz.
+# Neden tüm yazıcıları yazıcı çiftliğinizde birleştirip, kullanıcıların yazicilarinizi kullanarak dosyalar yazdirmasini saglayip,
+# bu dosyaları postayla onlara göndermeyesiniz ki?
+# Elbette bu harika bir fikir, bu yüzden hemen başlamaya karar veriyorsunuz.
+# Ana sorun, sunucuza gelen binlerce yazdırma komutunu işlemek ve bunları sahip olduğunuz 64 yazıcıya tek tek göndermek.
+# Amaç, herhangi bir baskı talebini aldıktan sonra 1 saat içinde baskiyi tamamlamak ve göndermek.
+# Hizmetinizin kullanıcı sayısının hızla artacağını tahmin ediyorsunuz, bu nedenle işiniz büyüdükçe taleple başa çıkmak için
+# yeni sunucular ve yazıcılar ekleyebilmeniz gerek.
+# Kullanmanız gereken veri yapıları, bu veri yapilarinin nasil uygulamaya dokulecegi ve baskı hizmetini
+# etkin bir şekilde çalıştırmak için gerekli olacak algoritmalar hakkında yaklasik 10 cümle ile kısa bir paragraf yazın.
+# Seçimlerinizi çalışma süresi ve depolama boyutu açısından açıklayın. (Time & Space Complexity)
+
+                  ---CEVAP---
+                  
+# Burada oncelikli olarak ilk gelen islemin ilk sonlanmasi yani first in first out (FIFO) mantiginda islemesi gerektigi 
+# bir veri yapisina ihtiyac duyariz, bu yuzden Queue veri yapisini tercih etmemiz gerekir. Ancak bazi taleplerin cok ivedi
+# ya da kayitli musteri olmasi ihtimaline karsin Priority Queue secmemiz gerekir. Daha onceligi olan musteriye oncelik vermek
+# icin bu algoritma kullanilmasi gerekir. Bunun disinda ikinci onemli sorun ise eldeki 64 yazicinin yetmemesi durumunda
+# yazicilarin artirilmasi. Eger static bir array seklinde tutarsak bu yazicilari, kapasite artirimi gerektiginde ayni miktarda
+# daha yazici eklememiz gerekecek (ram), bu sebeple Dynamic Array seklinde kullandigimiz kadar yazicinin aktif oldugu 
+# (ram uzerinde tutuldugu) bir veri yapiya ihtiyac duyariz. 
+# Space complexity: eldeki yazici sayisina p dersek, ve elimizde 0 ve N arasinda is bulundugunu dusunursek, yazicilar
+# max O(p) min O(0) kadar kullanilir. o ve p`nin sabit sayilar oldugu (yani bekleyen islerden bagimsiz) gozonune alinirsa 
+# O(p) yani linear bir space complexity vardir denilebilir.
+# Time complexity: eldeki is sayisina N, yazici sayisina da p dersek, elimizdeki islemler O(N/p) icerisinde sonuclanir. p`nin 
+# sabit oldugu dusunulurse O(N) seklinde linear bir sonuc alinir.
