@@ -1,0 +1,17 @@
+# En az iki metodu olan bir Class olusturunuz.
+# 1.metot =>  inputAl: Kullanicidan input alma.
+# 2.metot =>  yazdir: Alinan inputu terminale buyuk harflerle yazdirma metodu.
+
+class Odev():
+    def __init__(self): pass
+        
+    def inputAl(self):
+        self.a=input("Type a string: ")
+        
+    def yazdir(self):
+        self.a=self.a.upper()
+        print(self.a)
+        
+ornek=Odev()
+ornek.inputAl()
+ornek.yazdir()
