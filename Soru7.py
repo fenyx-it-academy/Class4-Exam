@@ -28,4 +28,11 @@
 # 5- talep => tahmini sure, aders vs
 # 6- yazici => hiz, renk vs
 # 7- Main => FIFO queue
-
+# 8- Main de Gelen talep FIFO olarak takip eden bir yapi olusturarak
+# 9- Her yazicilarin durumunu anlik takip eden bir queue kullanarak,
+# 10- Her talebe ilk yazici bosaldigi anda yada bos bir yazici var ise 
+#     bur Job objesi olusturup aktip olan joblar listesine eklerim.
+# 11- Bu yapida eklenen isler surekli bir yaziciya verilecektir. Islem
+#     tamamlandiginda is objesi yaziciyi bosa cikarir ve talep i tamamlandi diye isaretler.
+# 12- Yeni yazici eklenmesi durumunda yapilmasi gerelen sadece yazicilar listesine 
+#     o yaziciyi eklemek olacaktir. Bozulan yazici olsa da ayni durum gecerli.
