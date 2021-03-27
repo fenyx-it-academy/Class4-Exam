@@ -1,0 +1,7 @@
+islem tipi: para_yatirma, tutar: 100
+islem tipi: para_yatirma, tutar: 200
+islem tipi: para_cekme, tutar: 50
+islem tipi: para_yatirma, tutar: 100
+islem tipi: para_cekme, tutar: 250
+islem tipi: para_yatirma, tutar: 30
+bakiye: 130
