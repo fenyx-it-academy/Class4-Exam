@@ -1,4 +1,7 @@
-# Kullanici tarafindan girilen n sayisi kadar elemani olan ve elemanlari arasinda (i:i*i) iliskisi bulunan bir sozluk olusturunuz.
-# Ornek input: 8
-# Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
-
+indeks=int(input('indeks giriniz: '))
+anahtarlar= list(range(1,indeks+1))
+degerler = list()
+for kareal in anahtarlar:
+    degerler.append(kareal**2)
+sozluk = dict(zip(anahtarlar,degerler))
+print(sozluk)
